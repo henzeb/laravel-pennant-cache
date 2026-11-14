@@ -52,7 +52,7 @@ class CacheDriver implements CanListStoredFeatures, CanSetManyFeaturesForScopes,
 
         foreach ($features as $feature => $scopes) {
             $results[$feature] = array_map(
-                fn(mixed $scope) => $this->get($feature, $scope),
+                fn (mixed $scope) => $this->get($feature, $scope),
                 $scopes
             );
         }
